@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>美国雪梨公司2129年会抽奖</title>
+	<style>
+		#a{
+			border: 8px red dashed;
+			width: auto;
+			height: auto;
+			font-size: 36px;
+			color: lawngreen;
+			text-align: center;
+			line-height: 100px;
+		}
+		#d9{
+
+			text-align: center;
+		}
+		button{background-image: url("http://5b0988e595225.cdn.sohucs.com/q_70,c_zoom,w_640/images/20181025/5c02cfad599142c68ac6eb6c46c4dc34.gif");
+			background: no-repeat;
+			border-width: 2px;
+			text-align: center;
+			width: auto;
+			height:auto ;
+		}
+
+	</style>
+
+</head>
+<body>
+<div id ="a">美国雪梨公司2129年会抽奖——月球建设工程观光奖名单:
+	<span id="s" ></span>
+</div>
+<div id="d9">
+	<button onclick="start()">start</button>
+	<button onclick="stop()">stop</button>
+</div>
+
+<script>
+	var timer;
+    var a =0;
+	function luckboy() {
+         var  a =new Array(
+             "郑晓婷", "支飞扬", "谭育琪", "谢仕林", "王毅龙", "张正", "余春晖", "赵宏展", "李英男", "谭鸿兴", "乔  霏", "饶成勇", "马  锋", "蒲  翔", "游为量", "朱第明", "康富云", "黄  威", "谭攀飞", "翟帅斌", "余虔诚", "刘鸿俊", "甘英杰", "陈晓翔", "朱微微", "陈嘉浩", "李坚华", "张  宇", "王银生"
+		 );
+         var  n =Math.floor(Math.random()*a.length);
+         document.getElementById("s").innerText=a[n];
+    }
+        function start() {
+             if (a == 0) {
+                 timer = setInterval("luckboy()", 1);
+                 a=1;
+             }
+        }
+
+    function stop() {
+      clearInterval(timer);
+      a=0;
+    }
+
+</script>
+</body>
+</html>
